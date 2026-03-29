@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Anchuga Selvaratnam</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .services-hero{ padding:56px 0; text-align:center; color:var(--text); background:linear-gradient(135deg,var(--accent) 0%, rgba(255,107,107,0.06) 100%); border-radius:12px; margin-top:72px; }
+    .services-hero h1{ margin-bottom:6px; font-size:2rem; }
+    .services-hero p{ opacity:0.9; }
+    .services-wrap{ min-height:60vh; padding-top:28px; padding-bottom:40px; }
+    .service-card{ padding:22px; border-radius:12px; position:relative; overflow:hidden; }
+    .service-icon{ width:56px; height:56px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; margin-bottom:12px; background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(0,0,0,0.02)); }
+    .price-badge{ position:absolute; top:12px; right:12px; background:var(--accent-2); color:#071428; padding:6px 10px; border-radius:999px; font-weight:700; font-size:0.85rem; }
+    .testimonial{ padding:18px; border-radius:10px; background:rgba(255,255,255,0.02); margin-top:18px; }
+    .cta-float{ position:fixed; right:18px; bottom:18px; z-index:60; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <svg class="logo-svg" width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#4FD1C5" />
+              <stop offset="1" stop-color="#FF6B6B" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="48" fill="url(#g1)" />
+          <text x="50%" y="56%" text-anchor="middle" font-family="Inter, Arial" font-weight="700" font-size="44" fill="#071428">AS</text>
+        </svg>
+        <span class="logo-text ms-2">Anchuga</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item d-flex align-items-center ms-3">
+            <a class="nav-link social-link" href="https://github.com/angieanch" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="18" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.94 3.2 9.13 7.64 10.61.56.10.77-.24.77-.54 0-.27-.01-1-.01-1.95-3.11.68-3.77-1.5-3.77-1.5-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1.01 1.73 2.65 1.23 3.3.94.10-.74.39-1.23.71-1.51-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.16-3-.12-.28-.5-1.42.11-2.96 0 0 .95-.3 3.12 1.14a10.8 10.8 0 0 1 2.84-.38c.96 0 1.93.13 2.84.38 2.16-1.44 3.11-1.14 3.11-1.14.61 1.54.23 2.68.11 2.96.72.78 1.16 1.78 1.16 3 0 4.29-2.61 5.24-5.1 5.52.40.35.75 1.05.75 2.12 0 1.53-.01 2.77-.01 3.15 0 .3.2.65.78.54C19.05 20.88 22.25 16.69 22.25 11.75 22.25 5.48 17.27.5 12 .5z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li class="nav-item d-flex align-items-center ms-2">
+            <a class="nav-link social-link" href="https://www.linkedin.com/in/anchuga-selvaratnam-321b4033a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 4.98 8.5 2.5 2.5 0 0 1 4.98 3.5zM3 9h4v12H3zM9 9h3.8v1.6h.1c.5-.9 1.8-1.8 3.6-1.8 3.8 0 4.5 2.5 4.5 5.8V21H19v-5.3c0-1.3 0-3-1.8-3s-2 1.3-2 2.9V21H9V9z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li class="nav-item d-flex align-items-center ms-2">
+            <a class="nav-link social-link" href="https://www.instagram.com/angieanch" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A4.8 4.8 0 1 0 16.8 13 4.8 4.8 0 0 0 12 8.2zm6.4-2.9a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li class="nav-item d-flex align-items-center ms-2">
+            <a class="nav-link social-link" href="view-cv.html" target="_blank" rel="noopener noreferrer" aria-label="View CV">
+              <svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM14 3v5h5" fill="currentColor"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-indicator" aria-hidden="true"></div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="services-hero">
+      <h1>Services I Offer</h1>
+      <p class="lead">Design-led development and creative content to help your project stand out — from one-off flyers to full web apps.</p>
+      <div class="mt-3"><a href="contact.html" class="btn primary btn-lg">Talk to me</a></div>
+    </div>
+
+    <div class="services-wrap">
+      <h3>Core Services</h3>
+      <p class="text-muted">Practical packages and bespoke work — small business friendly.</p>
+
+      <div class="row g-4 mt-3">
+        <div class="col-md-6">
+          <div class="service-card project-card">
+            <div class="service-icon" aria-hidden="true">🎨</div>
+            <h4>Creating Flyers</h4>
+            <p class="text-muted">Designs for print and social that read well at a glance.</p>
+            <ul class="text-muted" style="margin-top:8px; margin-bottom:14px;">
+              <li>Format guidance for Instagram, Facebook, and A4 print</li>
+              <li>Brand-matching typography and colour palette</li>
+              <li>Two rounds of edits and source files on request</li>
+            </ul>
+            <a class="btn primary" href="contact.html">Request Flyer</a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="service-card project-card">
+            <div class="service-icon" aria-hidden="true">🌐</div>
+            <h4>Websites</h4>
+            <p class="text-muted">From brochure sites to small e-commerce, built for speed and clarity.</p>
+            <ul class="text-muted" style="margin-top:8px; margin-bottom:14px;">
+              <li>Responsive HTML/CSS with progressive enhancement</li>
+              <li>Basic SEO, accessibility checks, and performance tuning</li>
+              <li>CMS or static options and handover documentation</li>
+            </ul>
+            <a class="btn primary" href="contact.html">Request Website</a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="service-card project-card">
+            <div class="service-icon" aria-hidden="true">🖌️</div>
+            <h4>UI / UX Design</h4>
+            <p class="text-muted">User-centred design to validate ideas and produce pixel-ready interfaces.</p>
+            <ul class="text-muted" style="margin-top:8px; margin-bottom:14px;">
+              <li>Wireframes, interactive prototypes and usability suggestions</li>
+              <li>Design systems: colours, components and spacing rules</li>
+              <li>Exportable assets and developer handoff</li>
+            </ul>
+            <a class="btn primary" href="contact.html">Request Design</a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="service-card project-card">
+            <div class="service-icon" aria-hidden="true">🎬</div>
+            <h4>Video Editing</h4>
+            <p class="text-muted">Promo cuts, captioned social edits and presentation-ready videos.</p>
+            <ul class="text-muted" style="margin-top:8px; margin-bottom:14px;">
+              <li>Trimming, transitions, and colour correction</li>
+              <li>Subtitles, simple motion titles, and export in social formats</li>
+              <li>Royalty-free music suggestions and basic sound mix</li>
+            </ul>
+            <a class="btn primary" href="contact.html">Request Video</a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="service-card project-card">
+            <div class="service-icon" aria-hidden="true">📱</div>
+            <h4>App Development</h4>
+            <p class="text-muted">Prototyping and MVP development for web and mobile platforms.</p>
+            <ul class="text-muted" style="margin-top:8px; margin-bottom:14px;">
+              <li>Technology recommendations and rapid prototyping</li>
+              <li>Backend integration, authentication and basic analytics</li>
+              <li>Deployment guidance and simple maintenance plans</li>
+            </ul>
+            <a class="btn primary" href="contact.html">Request App</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-8">
+          <h4>What clients say</h4>
+          <div class="testimonial">“Fast, clear communication and thoughtful design — helped our campaign stand out.” — R. Fernando</div>
+          <div class="testimonial">“Great attention to detail on the site, and the prototype helped validate our concept quickly.” — L. Perera</div>
+        </div>
+        <div class="col-md-4">
+          <h4>Need a custom quote?</h4>
+          <p class="text-muted">Use the contact button to share project details and I’ll reply with timelines and cost estimates.</p>
+          <a class="btn secondary" href="contact.html">Get Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-float">
+    <a class="btn primary btn-lg" href="contact.html">Contact</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // moving indicator + active nav for services
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const navList = document.querySelector('.navbar-nav');
+      const links = Array.from(document.querySelectorAll('.nav-link'));
+      const indicator = document.querySelector('.nav-indicator');
+      function setActive(){ links.forEach(l=>l.classList.remove('active')); const cur = window.location.pathname.split('/').pop() || 'index.html'; const match = links.find(a=>a.getAttribute('href')===cur) || links.find(a=>a.getAttribute('href')==='services.html'); if(match) match.classList.add('active'); return match||links[0]; }
+      function moveTo(el){ if(!el||!indicator) return; const p = navList.getBoundingClientRect(); const r = el.getBoundingClientRect(); indicator.style.width = `${r.width}px`; indicator.style.left = `${r.left - p.left + navList.scrollLeft}px`; indicator.classList.remove('hidden'); }
+      const active = setActive(); moveTo(active);
+      links.forEach(l=>{ l.addEventListener('mouseenter', ()=>moveTo(l)); l.addEventListener('click', ()=>{ const bs = document.querySelector('.navbar-collapse.show'); if(bs && typeof bootstrap !== 'undefined') new bootstrap.Collapse(bs).hide(); }); });
+      navList.addEventListener('mouseleave', ()=> moveTo(document.querySelector('.nav-link.active')||links[0]));
+      window.addEventListener('resize', ()=> moveTo(document.querySelector('.nav-link.active')||links[0]));
+    }); 
+  </script>
+</body>
+</html>

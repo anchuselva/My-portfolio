@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>View CV — Anchuga Selvaratnam</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cv-wrap{ min-height:80vh; display:flex; align-items:center; justify-content:center; }
+    .cv-card{ max-width:920px; width:100%; padding:28px; border-radius:12px; background:rgba(255,255,255,0.02); }
+    .cv-preview{ width:100%; height:70vh; border-radius:8px; box-shadow:0 12px 40px rgba(2,6,23,0.6); overflow:auto; background:linear-gradient(180deg, rgba(0,0,0,0.02), transparent); user-select:none; -webkit-user-select:none; -webkit-user-drag:none; }
+    #pdf-container canvas{ display:block; margin:12px auto; max-width:100%; height:auto; box-shadow:0 8px 20px rgba(2,6,23,0.6); border-radius:6px; }
+    .cv-watermark{ position:absolute; pointer-events:none; mix-blend-mode:overlay; }
+  </style>
+</head>
+<body>
+  <div class="container cv-wrap">
+    <div class="cv-card">
+      <h3 class="mb-3">Protected CV — Anchuga Selvaratnam</h3>
+      <p class="text-muted small">This CV is view-only. For stronger protection use server-side authenticated streaming.</p>
+
+      <div id="gate">
+        <div class="mb-3">
+          <label for="cv-pass" class="form-label">Access code</label>
+          <input id="cv-pass" class="form-control" type="password" placeholder="Enter access code">
+        </div>
+        <div class="d-flex gap-2">
+          <button id="cv-unlock" class="btn primary">Unlock</button>
+          <a href="index.html" class="btn btn-outline-light">Back</a>
+        </div>
+        <div id="cv-error" class="text-danger mt-2" style="display:none;">Invalid code.</div>
+      </div>
+
+      <div id="cv-frame" style="display:none; margin-top:18px; position:relative;">
+        <div class="d-flex justify-content-end mb-2">
+          <button id="cv-close" class="btn btn-sm btn-outline-light">Close</button>
+        </div>
+        <div id="pdf-container" class="cv-preview" role="region" aria-label="PDF preview"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple view-only PDF rendering using PDF.js
+    const ACCESS_CODE = 'cv2025';
+    const unlock = document.getElementById('cv-unlock');
+    const pass = document.getElementById('cv-pass');
+    const err = document.getElementById('cv-error');
+    const gate = document.getElementById('gate');
+    const frame = document.getElementById('cv-frame');
+    const close = document.getElementById('cv-close');
+    const PDF_URL = 'Anchuga.pdf';
+
+    // Load PDF.js from CDN
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.8.162/pdf.min.js';
+    script.crossOrigin = 'anonymous';
+    script.onload = () => { /* ready */ };
+    document.head.appendChild(script);
+
+    unlock.addEventListener('click', async () => {
+      if(pass.value !== ACCESS_CODE){ err.style.display='block'; err.textContent='Invalid code.'; return; }
+      err.style.display='none'; gate.style.display='none'; frame.style.display='block';
+      await renderPDFView();
+      applyWatermark();
+    });
+
+    close.addEventListener('click', ()=>{ frame.style.display='none'; gate.style.display='block'; pass.value=''; document.getElementById('pdf-container').innerHTML=''; });
+    pass.addEventListener('keydown', (e)=>{ if(e.key === 'Enter') unlock.click(); });
+
+    async function renderPDFView(){
+      // wait for PDF.js
+      if(!window.pdfjsLib){ await new Promise(r=>{ script.onload = r; }); }
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.8.162/pdf.worker.min.js';
+      const loadingTask = pdfjsLib.getDocument(PDF_URL);
+      const pdf = await loadingTask.promise;
+      const container = document.getElementById('pdf-container');
+      container.innerHTML = '';
+      for(let pageNum=1; pageNum<=pdf.numPages; pageNum++){
+        const page = await pdf.getPage(pageNum);
+        const viewport = page.getViewport({ scale: 1.4 });
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        const renderContext = { canvasContext: context, viewport: viewport };
+        await page.render(renderContext).promise;
+        container.appendChild(canvas);
+      }
+
+      // prevent right-click / context menu on the pdf container (and document)
+      container.addEventListener('contextmenu', (e)=>{ e.preventDefault(); });
+      document.addEventListener('contextmenu', (e)=>{ if(frame.style.display === 'block') e.preventDefault(); });
+      // also disable selection and drag
+      container.addEventListener('selectstart', (e)=>e.preventDefault());
+      container.addEventListener('dragstart', (e)=>e.preventDefault());
+
+      // prevent common save/print/inspect keyboard shortcuts while CV is open
+      document.addEventListener('keydown', function(e){
+        if(frame.style.display !== 'block') return;
+        const key = e.key.toLowerCase();
+        const ctrl = e.ctrlKey || e.metaKey;
+        if(
+          // ctrl/cmd + s, p, u
+          (ctrl && (key === 's' || key === 'p' || key === 'u')) ||
+          // f12, ctrl+shift+i, ctrl+shift+c
+          e.key === 'F12' || (ctrl && e.shiftKey && (key === 'i' || key === 'c'))
+        ){
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+    }
+
+    function applyWatermark(){
+      const wrap = document.querySelector('.cv-card');
+      const mark = document.createElement('div');
+      mark.className = 'cv-watermark';
+      mark.style.top = '50%';
+      mark.style.left = '50%';
+      mark.style.transform = 'translate(-50%,-50%) rotate(-18deg)';
+      mark.style.opacity = '0.08';
+      mark.style.color = '#fff';
+      mark.style.fontSize = '42px';
+      mark.style.fontWeight = '700';
+      mark.style.width = '100%';
+      mark.style.textAlign = 'center';
+      mark.textContent = 'Anchuga Selvaratnam — Confidential • ' + new Date().toLocaleString();
+      wrap.style.position = 'relative';
+      wrap.appendChild(mark);
+
+      // blur PDF when page not focused
+      const container = document.getElementById('pdf-container');
+      document.addEventListener('visibilitychange', ()=>{ container.style.filter = document.hidden ? 'blur(6px)' : 'none'; });
+    }
+  </script>
+</body>
+</html>

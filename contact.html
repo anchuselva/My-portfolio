@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Anchuga Selvaratnam</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-wrap{ min-height:80vh; display:flex; align-items:center; justify-content:center; }
+    .contact-card{ max-width:720px; width:100%; padding:28px; border-radius:12px; background:rgba(255,255,255,0.02); }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <svg class="logo-svg" width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#4FD1C5" />
+              <stop offset="1" stop-color="#FF6B6B" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="48" fill="url(#g1)" />
+          <text x="50%" y="56%" text-anchor="middle" font-family="Inter, Arial" font-weight="700" font-size="44" fill="#071428">AS</text>
+        </svg>
+        <span class="logo-text ms-2">Anchuga</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item d-flex align-items-center ms-3">
+            <a class="nav-link social-link" href="https://github.com/angieanch" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="18" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.94 3.2 9.13 7.64 10.61.56.10.77-.24.77-.54 0-.27-.01-1-.01-1.95-3.11.68-3.77-1.5-3.77-1.5-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1.01 1.73 2.65 1.23 3.3.94.10-.74.39-1.23.71-1.51-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.16-3-.12-.28-.5-1.42.11-2.96 0 0 .95-.3 3.12 1.14a10.8 10.8 0 0 1 2.84-.38c.96 0 1.93.13 2.84.38 2.16-1.44 3.11-1.14 3.11-1.14.61 1.54.23 2.68.11 2.96.72.78 1.16 1.78 1.16 3 0 4.29-2.61 5.24-5.1 5.52.40.35.75 1.05.75 2.12 0 1.53-.01 2.77-.01 3.15 0 .3.2.65.78.54C19.05 20.88 22.25 16.69 22.25 11.75 22.25 5.48 17.27.5 12 .5z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li class="nav-item d-flex align-items-center ms-2">
+            <a class="nav-link social-link" href="https://www.linkedin.com/in/anchuga-selvaratnam-321b4033a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 4.98 8.5 2.5 2.5 0 0 1 4.98 3.5zM3 9h4v12H3zM9 9h3.8v1.6h.1c.5-.9 1.8-1.8 3.6-1.8 3.8 0 4.5 2.5 4.5 5.8V21H19v-5.3c0-1.3 0-3-1.8-3s-2 1.3-2 2.9V21H9V9z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li class="nav-item d-flex align-items-center ms-2">
+            <a class="nav-link social-link" href="https://www.instagram.com/angieanch" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A4.8 4.8 0 1 0 16.8 13 4.8 4.8 0 0 0 12 8.2zm6.4-2.9a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li class="nav-item d-flex align-items-center ms-2">
+            <a class="nav-link social-link" href="view-cv.html" target="_blank" rel="noopener noreferrer" aria-label="View CV">
+              <svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM14 3v5h5" fill="currentColor"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-indicator" aria-hidden="true"></div>
+    </div>
+  </nav>
+
+  <div class="container contact-wrap">
+    <div class="contact-card">
+      <h3>Contact Me</h3>
+      <p class="text-muted">Send me a message and I'll get back to you.</p>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <div class="mb-3 p-3" style="border-radius:10px; background:rgba(255,255,255,0.02);">
+            <strong>Email</strong>
+            <div class="small text-muted">anchuselva22@gmail.com</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3 p-3" style="border-radius:10px; background:rgba(255,255,255,0.02);">
+            <strong>Location</strong>
+            <div class="small text-muted">Colombo, Sri Lanka (remote available)</div>
+          </div>
+        </div>
+      </div>
+
+      <form id="contact-form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Your name</label>
+          <input id="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Your email</label>
+          <input id="email" type="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Subject</label>
+          <input id="subject" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" class="form-control" rows="6" required></textarea>
+        </div>
+        <div class="d-flex gap-2 align-items-center">
+          <button type="submit" class="btn primary">Send</button>
+          <a href="index.html" class="btn btn-outline-light">Back</a>
+        </div>
+        <div id="status" class="mt-3" style="display:none;"></div>
+      </form>
+
+      <hr class="my-4">
+      <h5>Other ways to connect</h5>
+      <div class="d-flex gap-2 mt-2">
+        <a class="btn btn-outline-light" href="https://www.linkedin.com/in/anchuga-selvaratnam-321b4033a" target="_blank">LinkedIn</a>
+        <a class="btn btn-outline-light" href="https://github.com/angieanch" target="_blank">GitHub</a>
+        <a class="btn btn-outline-light" href="view-cv.html" target="_blank">View CV</a>
+      </div>
+
+      <p class="small text-muted mt-3">By contacting me you consent to a reply via the provided email. No data is stored.</p>
+
+      <script>
+        // Simple client-side mailto handler: opens user's email client prefilled.
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('status');
+        form.addEventListener('submit', (e)=>{
+          e.preventDefault();
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const subject = document.getElementById('subject').value.trim();
+          const message = document.getElementById('message').value.trim();
+          if(!name||!email||!subject||!message){ status.style.display='block'; status.className='text-danger'; status.textContent='Please complete all fields.'; return; }
+
+          const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${encodeURIComponent(message)}`;
+          const mailto = `mailto:anchuselva22@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+          window.location.href = mailto;
+          status.style.display='block'; status.className='text-success'; status.textContent='Email client opened. If nothing happened, please send manually to anchuselva22@gmail.com';
+        });
+      </script>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const navList = document.querySelector('.navbar-nav');
+      const links = Array.from(document.querySelectorAll('.nav-link'));
+      const indicator = document.querySelector('.nav-indicator');
+      function setActive(){ links.forEach(l=>l.classList.remove('active')); const cur = window.location.pathname.split('/').pop() || 'index.html'; const match = links.find(a=>a.getAttribute('href')===cur) || links.find(a=>a.getAttribute('href')==='contact.html'); if(match) match.classList.add('active'); return match||links[0]; }
+      function moveTo(el){ if(!el||!indicator) return; const p = navList.getBoundingClientRect(); const r = el.getBoundingClientRect(); indicator.style.width = `${r.width}px`; indicator.style.left = `${r.left - p.left + navList.scrollLeft}px`; indicator.classList.remove('hidden'); }
+      const active = setActive(); moveTo(active);
+      links.forEach(l=>{ l.addEventListener('mouseenter', ()=>moveTo(l)); l.addEventListener('click', ()=>{ const bs = document.querySelector('.navbar-collapse.show'); if(bs && typeof bootstrap !== 'undefined') new bootstrap.Collapse(bs).hide(); }); });
+      navList.addEventListener('mouseleave', ()=> moveTo(document.querySelector('.nav-link.active')||links[0]));
+      window.addEventListener('resize', ()=> moveTo(document.querySelector('.nav-link.active')||links[0]));
+    });
+  </script>
+</body>
+</html>
