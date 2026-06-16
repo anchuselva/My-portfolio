@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CapCut video editing showcase by Anchuga Selvaratnam.">
+  <title>CapCut Editing | Anchuga Selvaratnam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="capcut-page">
+  <div class="stars" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="CapCut page navigation">
+      <a class="brand" href="index.html#home" aria-label="Anchuga home">ANCHUGA</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+      <div class="nav-menu" id="main-menu">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a class="active" href="index.html#projects">Projects</a>
+      </div>
+      <a class="nav-status" href="index.html#contact"><span></span> Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="capcut-hero section-shell">
+      <div class="capcut-copy reveal">
+        <span class="eyebrow">Creative video editing</span>
+        <h1>CapCut <span>Editing</span></h1>
+        <p>I create modern short-form edits with smooth transitions, synced captions, clean pacing, sound-led cuts, and motion effects for social media content.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="index.html#contact">Work with me <span aria-hidden="true">+</span></a>
+          <a class="button button-ghost" href="index.html#projects">Back to projects</a>
+        </div>
+      </div>
+
+      <div class="capcut-stage reveal" aria-label="Animated video editing preview">
+        <div class="capcut-phone">
+          <div class="phone-top"></div>
+          <div class="video-preview">
+            <span>CAPCUT</span>
+            <strong>Visual Story</strong>
+            <i></i>
+          </div>
+          <div class="timeline-stack">
+            <span style="--w:82%;--d:.1s"></span>
+            <span style="--w:64%;--d:.3s"></span>
+            <span style="--w:74%;--d:.5s"></span>
+          </div>
+        </div>
+        <div class="edit-badge badge-a">Transitions</div>
+        <div class="edit-badge badge-b">Captions</div>
+        <div class="edit-badge badge-c">Motion FX</div>
+      </div>
+    </section>
+
+    <section class="content-section section-shell">
+      <div class="section-heading reveal">
+        <span class="section-kicker">Editing style</span>
+        <h2>Clean edits with <span>strong visual flow</span></h2>
+      </div>
+      <div class="capcut-grid">
+        <article class="capcut-card glass-card reveal">
+          <span>01</span>
+          <h3>Short-Form Reels</h3>
+          <p>Fast, polished edits for Instagram, TikTok, YouTube Shorts, portfolios, and event highlights.</p>
+        </article>
+        <article class="capcut-card glass-card reveal">
+          <span>02</span>
+          <h3>Captions &amp; Typography</h3>
+          <p>Readable animated captions, emphasis words, title frames, and clean text hierarchy.</p>
+        </article>
+        <article class="capcut-card glass-card reveal">
+          <span>03</span>
+          <h3>Transitions &amp; Effects</h3>
+          <p>Smooth cuts, beat sync, overlays, glow effects, zoom movement, and modern motion styling.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section section-shell">
+      <div class="capcut-workflow glass-card reveal">
+        <div>
+          <span class="section-kicker">Workflow</span>
+          <h2>From raw clip to <span>polished story</span></h2>
+          <p>Every edit is shaped with pacing, music timing, captions, and clean visual rhythm so the final video feels intentional and ready to post.</p>
+        </div>
+        <div class="workflow-steps" aria-label="CapCut editing workflow">
+          <span><b>01</b>Import</span>
+          <span><b>02</b>Cut</span>
+          <span><b>03</b>Caption</span>
+          <span><b>04</b>Animate</span>
+          <span><b>05</b>Export</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section-shell">
+    <a class="brand" href="index.html#home">ANCHUGA</a>
+    <p>CapCut editing showcase</p>
+    <a href="index.html#projects">Back to portfolio</a>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    reveals.forEach((item, index) => {
+      item.style.setProperty('--reveal-delay', `${Math.min(index * 70, 420)}ms`);
+      observer.observe(item);
+    });
+
+    const header = document.querySelector('.site-header');
+    const setHeader = () => header.classList.toggle('scrolled', window.scrollY > 24);
+    setHeader();
+    window.addEventListener('scroll', setHeader, { passive: true });
+
+    const menuButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if (menuButton && menu) {
+      menuButton.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+      });
+      menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      }));
+    }
+
+    const cursorGlow = document.querySelector('.cursor-glow');
+    if (cursorGlow && window.matchMedia('(pointer: fine)').matches) {
+      document.body.classList.add('pointer-active');
+      window.addEventListener('pointermove', event => {
+        document.documentElement.style.setProperty('--mouse-x', `${event.clientX}px`);
+        document.documentElement.style.setProperty('--mouse-y', `${event.clientY}px`);
+      }, { passive: true });
+    }
+  </script>
+</body>
+</html>

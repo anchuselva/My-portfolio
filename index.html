@@ -8,23 +8,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="stars" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
   <header class="site-header">
     <nav class="nav-shell" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="Anchuga home">Anch.</a>
+      <a class="brand" href="#home" aria-label="Anchuga home">ANCHUGA</a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Open navigation">
         <span></span><span></span>
       </button>
       <div class="nav-menu" id="main-menu">
         <a class="active" href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
       <a class="nav-status" href="mailto:anchuselva22@gmail.com"><span></span> Available</a>
@@ -44,7 +43,7 @@
           <a class="button button-ghost" href="Anchuga.pdf" target="_blank" rel="noopener">Download CV</a>
         </div>
         <div class="social-row" aria-label="Social links">
-          <a href="https://github.com/angieanch" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+          <a href="https://github.com/anchuselva" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
           <a href="https://www.linkedin.com/in/anchuga-selvaratnam-321b4033a" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
           <a href="mailto:anchuselva22@gmail.com" aria-label="Email">@</a>
           <a href="tel:+94777208491" aria-label="Phone">Ph</a>
@@ -53,6 +52,14 @@
 
       <div class="hero-visual reveal">
         <div class="portrait-glow"></div>
+        <div class="poster-text" aria-hidden="true">
+          <span>UI/UX &amp;</span>
+          <strong>WEB DEVELOPER</strong>
+        </div>
+        <span class="poster-squiggle squiggle-one" aria-hidden="true"></span>
+        <span class="poster-squiggle squiggle-two" aria-hidden="true"></span>
+        <span class="poster-dot dot-one" aria-hidden="true"></span>
+        <span class="poster-dot dot-two" aria-hidden="true"></span>
         <div class="portrait-card">
           <span class="code-chip">&lt;/&gt;</span>
           <img src="me.jpeg" alt="Anchuga Selvaratnam">
@@ -60,6 +67,7 @@
         <div class="experience-chip"><strong>5+</strong><span>Projects<br>completed</span></div>
         <div class="floating-tag tag-one">UI/UX</div>
         <div class="floating-tag tag-two">Full Stack</div>
+        <div class="floating-tag tag-three">Developer</div>
       </div>
     </section>
 
@@ -87,39 +95,88 @@
 
     <section class="content-section section-shell" id="skills">
       <div class="section-heading reveal">
-        <span class="section-kicker">My skills</span>
-        <h2>Technologies I <span>work with</span></h2>
+        <span class="section-kicker">Technical Skills</span>
+        <h2>Tools that power my <span>work</span></h2>
+        <p class="skills-subtitle">Tools and technologies I use to build, test, and design digital solutions.</p>
       </div>
       <div class="skill-grid">
         <article class="skill-card glass-card reveal">
-          <div class="skill-icon cyan">JS</div><h3>Frontend</h3>
-          <p>HTML, CSS, JavaScript, TypeScript, React, Bootstrap</p>
-          <div class="meter"><span style="--level:92%"></span></div>
+          <div class="skill-card-heading"><div class="skill-icon cyan">&lt;/&gt;</div><div><span>Core foundations</span><h3>Programming Languages</h3></div></div>
+          <div class="skill-chips">
+            <span><i class="devicon-java-plain colored"></i>Java</span><span><i class="devicon-python-plain colored"></i>Python</span><span><i class="devicon-c-plain colored"></i>C</span><span><i class="devicon-cplusplus-plain colored"></i>C++</span><span><i class="skill-glyph">SQL</i>SQL</span><span><i class="devicon-r-plain colored"></i>R</span>
+          </div>
         </article>
         <article class="skill-card glass-card reveal">
-          <div class="skill-icon purple">API</div><h3>Backend</h3>
-          <p>Node.js, Express.js, PHP, REST APIs, JSON, AJAX</p>
-          <div class="meter"><span style="--level:82%"></span></div>
+          <div class="skill-card-heading"><div class="skill-icon purple">WEB</div><div><span>Digital experiences</span><h3>Web Development</h3></div></div>
+          <div class="skill-chips">
+            <span><i class="devicon-html5-plain colored"></i>HTML</span><span><i class="devicon-css3-plain colored"></i>CSS</span><span><i class="devicon-javascript-plain colored"></i>JavaScript</span><span><i class="devicon-bootstrap-plain colored"></i>Bootstrap</span><span><i class="devicon-react-original colored"></i>React</span><span><i class="devicon-jquery-plain colored"></i>jQuery</span><span><i class="skill-glyph">AX</i>AJAX</span><span><i class="devicon-json-plain colored"></i>JSON</span><span><i class="devicon-typescript-plain colored"></i>TypeScript</span><span><i class="devicon-wordpress-plain colored"></i>WordPress</span><span><i class="devicon-express-original"></i>Express.js</span><span><i class="devicon-nodejs-plain colored"></i>Node.js</span><span><i class="skill-glyph">UX</i>UI/UX Principles</span>
+          </div>
         </article>
         <article class="skill-card glass-card reveal">
-          <div class="skill-icon green">DB</div><h3>Databases</h3>
-          <p>MongoDB, MySQL, SQL, Firebase Realtime Database</p>
-          <div class="meter"><span style="--level:84%"></span></div>
+          <div class="skill-card-heading"><div class="skill-icon blue">QA</div><div><span>Quality assurance</span><h3>QA &amp; Testing</h3></div></div>
+          <div class="skill-chips">
+            <span><i class="skill-glyph">MT</i>Manual Testing</span><span><i class="skill-glyph">TC</i>Test Case Writing</span><span><i class="skill-glyph">BR</i>Bug Reporting</span><span><i class="skill-glyph">FT</i>Functional Testing</span><span><i class="skill-glyph">UI</i>UI Testing</span><span><i class="skill-glyph">API</i>API Testing</span><span><i class="devicon-postman-plain colored"></i>Postman</span><span><i class="devicon-selenium-original colored"></i>Selenium</span><span><i class="devicon-cypressio-plain"></i>Cypress</span><span><i class="devicon-playwright-plain colored"></i>Playwright</span><span><i class="skill-glyph">AT</i>Basic Automation Testing</span>
+          </div>
         </article>
         <article class="skill-card glass-card reveal">
-          <div class="skill-icon pink">UX</div><h3>Design</h3>
-          <p>Figma, Canva, wireframes, prototypes, UI/UX principles</p>
-          <div class="meter"><span style="--level:90%"></span></div>
+          <div class="skill-card-heading"><div class="skill-icon green">DB</div><div><span>Reliable data</span><h3>Databases</h3></div></div>
+          <div class="skill-chips">
+            <span><i class="devicon-mongodb-plain colored"></i>MongoDB</span><span><i class="devicon-mysql-original colored"></i>MySQL</span><span><i class="devicon-firebase-plain colored"></i>Firebase Realtime Database</span>
+          </div>
         </article>
         <article class="skill-card glass-card reveal">
-          <div class="skill-icon blue">QA</div><h3>QA &amp; Testing</h3>
-          <p>Postman, Selenium, Cypress, Playwright, test cases</p>
-          <div class="meter"><span style="--level:80%"></span></div>
+          <div class="skill-card-heading"><div class="skill-icon pink">UX</div><div><span>Visual thinking</span><h3>Design Tools</h3></div></div>
+          <div class="skill-chips">
+            <span><i class="devicon-figma-plain colored"></i>Figma</span><span><i class="devicon-canva-original colored"></i>Canva</span><span><i class="brand-glyph capcut-glyph">Cc</i>CapCut</span>
+          </div>
         </article>
         <article class="skill-card glass-card reveal">
-          <div class="skill-icon orange">&lt;/&gt;</div><h3>Programming</h3>
-          <p>Java, Python, C, C++, SQL, R and Android development</p>
-          <div class="meter"><span style="--level:78%"></span></div>
+          <div class="skill-card-heading"><div class="skill-icon orange">DEV</div><div><span>Development workflow</span><h3>Development Tools</h3></div></div>
+          <div class="skill-chips">
+            <span><i class="devicon-github-original"></i>GitHub</span><span><i class="devicon-vscode-plain colored"></i>Visual Studio Code</span><span><i class="devicon-netbeans-plain colored"></i>NetBeans</span><span><i class="devicon-rstudio-plain colored"></i>R Studio</span><span><i class="devicon-androidstudio-plain colored"></i>Android Studio</span><span><i class="brand-glyph clickup-glyph">CU</i>ClickUp</span><span><i class="devicon-trello-plain colored"></i>Trello</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section section-shell" id="education">
+      <div class="section-heading reveal">
+        <span class="section-kicker">Academic journey</span>
+        <h2>My <span>education</span></h2>
+      </div>
+      <div class="education-timeline">
+        <article class="education-card glass-card reveal">
+          <span class="education-date">July 2024 - Present</span>
+          <div class="education-marker" aria-hidden="true"></div>
+          <div class="education-details">
+            <div class="education-logo"><img src="images.jpg" alt="SLIIT City Uni logo"></div>
+            <div>
+            <h3>Higher National Diploma in Information Technology (HNDIT)</h3>
+            <h4>SLIIT City Uni</h4>
+            </div>
+          </div>
+        </article>
+        <article class="education-card glass-card reveal">
+          <span class="education-date">2016 - 2022</span>
+          <div class="education-marker" aria-hidden="true"></div>
+          <div class="education-details">
+            <div class="education-logo"><img src="images (1).jpg" alt="Saivapragasa Ladies' College logo"></div>
+            <div>
+            <h3>Secondary Education</h3>
+            <h4>Saivapragasa Ladies' College, Vavuniya</h4>
+            </div>
+          </div>
+        </article>
+        <article class="education-card glass-card reveal">
+          <span class="education-date">2009 - 2016</span>
+          <div class="education-marker" aria-hidden="true"></div>
+          <div class="education-details">
+            <div class="education-logo"><img src="images (2).jpg" alt="Adventist International School logo"></div>
+            <div>
+            <h3>Primary and Secondary Education</h3>
+            <h4>Adventist International School, Vavuniya</h4>
+            </div>
+          </div>
         </article>
       </div>
     </section>
@@ -127,26 +184,130 @@
     <section class="content-section section-shell" id="experience">
       <div class="section-heading reveal">
         <span class="section-kicker">My journey</span>
-        <h2>Experience &amp; <span>education</span></h2>
+        <h2>Professional <span>experience</span></h2>
       </div>
       <div class="timeline-grid">
         <article class="timeline-card glass-card reveal">
           <span class="timeline-date">Dec 2025 - May 2026</span>
           <h3>UI/UX Designer Intern</h3>
           <h4>IdeaTech (Pvt) Ltd</h4>
-          <p>Designed wireframes and high-fidelity interfaces in Figma for web and mobile products, collaborating with developers and product teams.</p>
+          <p>Completed a six-month UI/UX design internship focused on creating thoughtful, user-friendly experiences for web and mobile products.</p>
+          <ul class="experience-points">
+            <li>Designed wireframes, user flows, and high-fidelity UI screens using Figma.</li>
+            <li>Translated product requirements into clear and intuitive interface concepts.</li>
+            <li>Collaborated with developers and product teams throughout the design process.</li>
+            <li>Supported responsive design decisions and consistency across product screens.</li>
+          </ul>
         </article>
-        <article class="timeline-card glass-card reveal">
-          <span class="timeline-date">July 2024 - Present</span>
-          <h3>Higher National Diploma in IT</h3>
-          <h4>SLIIT City Uni</h4>
-          <p>Building a broad software engineering foundation through web, database, programming, design, and research projects.</p>
+      </div>
+    </section>
+
+    <section class="content-section section-shell" id="memberships">
+      <div class="section-heading reveal">
+        <span class="section-kicker">Professional community</span>
+        <h2>Professional <span>memberships</span></h2>
+      </div>
+      <article class="membership-summary glass-card reveal">
+        <div class="membership-logo" aria-hidden="true">IEEE</div>
+        <div>
+          <span class="membership-label">Professional Membership</span>
+          <h3>Institute of Electrical and Electronics Engineers (IEEE)</h3>
+          <p>Member since Dec 2024 <i></i> Member No: 100620093 <i></i> Status: <strong>Active</strong></p>
+        </div>
+      </article>
+      <div class="membership-grid">
+        <article class="membership-card glass-card reveal">
+          <span class="membership-number">01</span>
+          <div class="membership-symbol cyan">CS</div>
+          <h3>IEEE Computer Society</h3>
+          <p>Connecting with the global computing community and developing knowledge across software, technology, and computer science.</p>
+          <span class="active-badge"><i></i> Active Member</span>
         </article>
-        <article class="timeline-card glass-card reveal">
-          <span class="timeline-date">Since Dec 2024</span>
-          <h3>Active IEEE Member</h3>
-          <h4>IEEE CS, IAS &amp; SIGHT</h4>
-          <p>Editorial Team Member for Embed X 2025 and Program Team Member for Lead Spring 2025.</p>
+        <article class="membership-card glass-card reveal">
+          <span class="membership-number">02</span>
+          <div class="membership-symbol purple">IAS</div>
+          <h3>IEEE Industry Applications Society</h3>
+          <p>Participating in a professional community focused on practical technology, industry applications, and student development.</p>
+          <span class="active-badge"><i></i> Active Member</span>
+        </article>
+        <article class="membership-card glass-card reveal">
+          <span class="membership-number">03</span>
+          <div class="membership-symbol green">S</div>
+          <h3>IEEE SIGHT</h3>
+          <p>Supporting the use of technology and engineering knowledge to create meaningful, sustainable humanitarian impact.</p>
+          <span class="active-badge"><i></i> Active Member</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section section-shell" id="volunteering">
+      <div class="section-heading reveal">
+        <span class="section-kicker">Community contribution</span>
+        <h2>Volunteering &amp; <span>leadership</span></h2>
+      </div>
+      <div class="leadership-grid">
+        <article class="leadership-card glass-card reveal">
+          <div class="leadership-top">
+            <div class="leadership-icon blue">LS</div>
+            <span class="leadership-year">2025</span>
+          </div>
+          <span class="leadership-role">Program Team Member</span>
+          <h3>Lead Spring 2025</h3>
+          <h4>IEEE IAS and IEEE PES Student Branch - SLIIT</h4>
+          <p>Supported a leadership and entrepreneurship initiative through collaborative planning and coordination.</p>
+          <ul class="leadership-points">
+            <li>Conducted investor research to support program development.</li>
+            <li>Contributed to agenda planning and event organization.</li>
+            <li>Coordinated podcast sessions with the wider program team.</li>
+          </ul>
+        </article>
+        <article class="leadership-card glass-card reveal">
+          <div class="leadership-top">
+            <div class="leadership-icon purple">EX</div>
+            <span class="leadership-year">2025</span>
+          </div>
+          <span class="leadership-role">Editorial Team Member</span>
+          <h3>Embed X 2025</h3>
+          <h4>IEEE IAS and IEEE PES Student Branch - SLIIT</h4>
+          <p>Supported event branding and communication through creative design and editorial contributions.</p>
+          <ul class="leadership-points">
+            <li>Designed promotional flyers and communication materials.</li>
+            <li>Created member tags and supporting event assets.</li>
+            <li>Collaborated with the team to maintain consistent branding.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section section-shell" id="competitions">
+      <div class="section-heading reveal">
+        <span class="section-kicker">Challenges &amp; research</span>
+        <h2>Competitions &amp; <span>research</span></h2>
+      </div>
+      <div class="competition-grid">
+        <article class="competition-card glass-card reveal">
+          <div class="competition-accent innovation" aria-hidden="true">01</div>
+          <span class="competition-type">Most Innovative Product Competition</span>
+          <h3>Innovélec 2025</h3>
+          <h4>IEEE PES Student Chapter - SLIIT</h4>
+          <p>Participated in the Most Innovative Product category with the team-developed SaveLKR smart budgeting application.</p>
+          <div class="competition-tags"><span>Innovation</span><span>SaveLKR</span><span>Team Project</span></div>
+        </article>
+        <article class="competition-card glass-card reveal">
+          <div class="competition-accent iot" aria-hidden="true">02</div>
+          <span class="competition-type">IoT Hands-on Group Competition</span>
+          <h3>Electroverse 2025</h3>
+          <h4>IEEE Power &amp; Energy Society - SLIIT</h4>
+          <p>Participated in a collaborative, hands-on Internet of Things competition using MagicBit development kits.</p>
+          <div class="competition-tags"><span>IoT</span><span>MagicBit</span><span>Collaboration</span></div>
+        </article>
+        <article class="competition-card glass-card reveal">
+          <div class="competition-accent research" aria-hidden="true">03</div>
+          <span class="competition-type">Research Communication Skills</span>
+          <h3>3 MRC</h3>
+          <h4>IEEE Student Branch of Curtin University</h4>
+          <p>Presented ongoing research on an AI-based model designed to predict overcrowding in public transport.</p>
+          <div class="competition-tags"><span>AI Research</span><span>Public Transport</span><span>Presentation</span></div>
         </article>
       </div>
     </section>
@@ -154,9 +315,63 @@
     <section class="content-section section-shell" id="projects">
       <div class="section-heading heading-row reveal">
         <div><span class="section-kicker">My projects</span><h2>Featured <span>projects</span></h2></div>
-        <a class="button button-ghost" href="https://github.com/angieanch" target="_blank" rel="noopener">View GitHub</a>
+        <a class="button button-ghost" href="https://github.com/anchuselva" target="_blank" rel="noopener">View GitHub</a>
       </div>
       <div class="project-grid">
+        <article class="project-card glass-card reveal">
+          <div class="project-visual capcut"><span>CapCut</span><b>Edit. Animate. Tell stories.</b><i></i></div>
+          <div class="project-body">
+            <span class="project-type">Creative Video Editing</span>
+            <h3>CapCut Editing Portfolio</h3>
+            <p>A stylish showcase page for short-form video editing, motion effects, captions, transitions, and social media content created with CapCut.</p>
+            <p>The page presents a modern editing workflow with cinematic dark UI, animated timeline elements, service cards, and clean portfolio navigation.</p>
+            <a class="project-link" href="capcut.html">View CapCut page <span>+</span></a>
+            <div class="tags"><span>CapCut</span><span>Video Editing</span><span>Motion</span><span>Captions</span><span>Social Media</span></div>
+          </div>
+        </article>
+        <article class="project-card glass-card reveal">
+          <div class="project-visual professional-skills"><span>Professional Skills</span><b>Learn. Reflect. Grow.</b><i></i></div>
+          <div class="project-body">
+            <span class="project-type">Interactive Digital Journal</span>
+            <h3>Professional Skills Portfolio</h3>
+            <p>An interactive portfolio documenting my professional development through weekly learning topics, completed activities, evidence, personal reflections, identified weaknesses, and improvement plans.</p>
+            <p>It covers essential workplace skills including communication, emotional intelligence, CV writing, interviews, meetings, telephone etiquette, ethics, negotiation, grooming, and dining etiquette.</p>
+            <p>The portfolio also presents the Grow Green group project, highlighting teamwork, environmental awareness, event organization, and public engagement.</p>
+            <p>Features include a modern animated design, visual galleries, reusable components, modal windows, a Learning Board, progress tracking, and a printable portfolio report.</p>
+            <div class="tags"><span>React.js</span><span>Vite</span><span>JavaScript</span><span>JSX</span><span>HTML5</span><span>CSS3</span><span>GitHub Pages</span></div>
+          </div>
+        </article>
+        <article class="project-card glass-card reveal">
+          <div class="project-visual vehiclego"><span>VehicleGo</span><b>Rent and explore Sri Lanka.</b><i></i></div>
+          <div class="project-body">
+            <span class="project-type">Native Android Marketplace</span>
+            <h3>VehicleGo</h3>
+            <p>A native Android vehicle rental marketplace designed for tourists in Sri Lanka to browse, search, and contact local vehicle owners directly.</p>
+            <p>The app supports self-drive and driver-based rentals with vehicle listings, smart filters, owner contact flow, post-ad functionality, safety tips, and a mobile-friendly interface.</p>
+            <div class="tags"><span>Java</span><span>Android Studio</span><span>XML</span><span>AndroidX</span><span>Fragments</span><span>RecyclerView</span></div>
+          </div>
+        </article>
+        <article class="project-card glass-card reveal">
+          <div class="project-visual feedpulse"><span>FeedPulse</span><b>Turn feedback into action.</b><i></i></div>
+          <div class="project-body">
+            <span class="project-type">AI-Powered Feedback Platform</span>
+            <h3>FeedPulse</h3>
+            <p>A modern product feedback management platform where users submit bugs, feature requests, and improvement ideas through a polished public form.</p>
+            <p>Its AI feedback coach recommends categories, detects sentiment, calculates priority, extracts tags, creates summaries, and suggests ways to make every submission more actionable.</p>
+            <p>The secure, responsive admin control room supports search, filters, status updates, trend tracking, AI-generated insights, and on-demand analysis.</p>
+            <div class="tags"><span>React</span><span>TypeScript</span><span>Express</span><span>MongoDB</span><span>Python AI</span></div>
+          </div>
+        </article>
+        <article class="project-card glass-card reveal">
+          <div class="project-visual portfolio"><span>Portfolio</span><b>Designed to make an impression.</b><i></i></div>
+          <div class="project-body">
+            <span class="project-type">Personal Portfolio Website</span>
+            <h3>Anchuga Portfolio</h3>
+            <p>A responsive personal portfolio designed and developed to present my experience, technical skills, projects, and contact details through a distinctive dark interface.</p>
+            <p>Features modern motion, glass-style cards, animated skill meters, interactive project effects, accessible reduced-motion controls, and layouts optimized for desktop and mobile.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive UI</span><span>Accessibility</span></div>
+          </div>
+        </article>
         <article class="project-card glass-card reveal">
           <div class="project-visual budget"><span>SaveLKR</span><b>Track smarter.</b><i></i></div>
           <div class="project-body">
@@ -167,7 +382,7 @@
           </div>
         </article>
         <article class="project-card glass-card reveal">
-          <div class="project-visual studio"><span>StudioFlow</span><b>Bookings at a glance.</b><i></i></div>
+          <div class="project-visual studio"><span>Ambiance</span><b>Bookings at a glance.</b><i></i></div>
           <div class="project-body">
             <span class="project-type">Full Stack System</span>
             <h3>Photography Studio Management</h3>
@@ -208,18 +423,23 @@
           <a class="contact-item" href="tel:+94777208491"><span>Ph</span><div><small>Phone</small><strong>+94 77 720 8491</strong></div></a>
           <a class="contact-item" href="https://www.linkedin.com/in/anchuga-selvaratnam-321b4033a" target="_blank" rel="noopener"><span>in</span><div><small>LinkedIn</small><strong>anchuga-selvaratnam</strong></div></a>
         </div>
-        <form class="contact-form glass-card reveal" id="contact-form">
+        <form class="contact-form glass-card reveal" id="contact-form" action="https://formsubmit.co/anchuselva22@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New portfolio message for Anchuga">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" class="form-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="field-row"><label>Your name<input type="text" name="name" required></label><label>Your email<input type="email" name="email" required></label></div>
           <label>Subject<input type="text" name="subject" required></label>
           <label>Your message<textarea name="message" rows="5" required></textarea></label>
           <button class="button button-primary" type="submit">Send message <span>+</span></button>
+          <p class="form-note" id="form-note">Your message will be sent securely to my email.</p>
         </form>
       </div>
     </section>
   </main>
 
   <footer class="section-shell">
-    <a class="brand" href="#home">Anch.</a>
+    <a class="brand" href="#home">ANCHUGA</a>
     <p>&copy; 2026 Anchuga Selvaratnam. Designed and built with care.</p>
     <a href="#home" aria-label="Back to top">Back to top</a>
   </footer>
@@ -238,12 +458,14 @@
 
     const sections = [...document.querySelectorAll('main section[id]')];
     const navLinks = [...document.querySelectorAll('.nav-menu a')];
+    const header = document.querySelector('.site-header');
     const updateActive = () => {
       let current = sections[0];
       sections.forEach(section => {
         if (section.getBoundingClientRect().top < 180) current = section;
       });
       navLinks.forEach(link => link.classList.toggle('active', current && link.getAttribute('href') === `#${current.id}`));
+      header.classList.toggle('scrolled', window.scrollY > 20);
     };
     updateActive();
     window.addEventListener('scroll', updateActive, { passive: true });
@@ -256,14 +478,76 @@
         }
       });
     }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(item => observer.observe(item));
+    document.querySelectorAll('.reveal').forEach((item, index) => {
+      item.style.setProperty('--reveal-delay', `${Math.min(index % 6, 5) * 65}ms`);
+      observer.observe(item);
+    });
+
+    document.querySelectorAll('.skill-card').forEach(card => {
+      const chips = [...card.querySelectorAll('.skill-chips span')];
+      const count = Math.max(chips.length - 1, 1);
+      const spread = chips.length > 8 ? 164 : 142;
+      const start = -spread / 2;
+      const radius = 132;
+      card.style.setProperty('--orbit-radius', `${radius}px`);
+      card.style.setProperty('--orbit-space', '224px');
+      chips.forEach((chip, index) => {
+        const angle = start + (spread * index / count);
+        chip.style.setProperty('--orbit-angle', `${angle}deg`);
+        chip.style.setProperty('--orbit-delay', `${index * 26}ms`);
+      });
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-expanded', 'false');
+      card.addEventListener('click', event => {
+        if (event.target.closest('a')) return;
+        const nextState = !card.classList.contains('is-orbiting');
+        document.querySelectorAll('.skill-card.is-orbiting').forEach(openCard => {
+          if (openCard !== card) {
+            openCard.classList.remove('is-orbiting');
+            openCard.setAttribute('aria-expanded', 'false');
+          }
+        });
+        card.classList.toggle('is-orbiting', nextState);
+        card.setAttribute('aria-expanded', String(nextState));
+      });
+      card.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          card.click();
+        }
+      });
+    });
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const finePointer = window.matchMedia('(pointer: fine)').matches;
+    if (!reducedMotion && finePointer) {
+      const glow = document.querySelector('.cursor-glow');
+      window.addEventListener('pointermove', event => {
+        document.body.classList.add('pointer-active');
+        glow.style.setProperty('--mouse-x', `${event.clientX}px`);
+        glow.style.setProperty('--mouse-y', `${event.clientY}px`);
+      }, { passive: true });
+
+      document.querySelectorAll('.skill-card, .project-card').forEach(card => {
+        card.addEventListener('pointermove', event => {
+          const rect = card.getBoundingClientRect();
+          const rotateX = ((event.clientY - rect.top) / rect.height - .5) * -5;
+          const rotateY = ((event.clientX - rect.left) / rect.width - .5) * 5;
+          card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+        });
+        card.addEventListener('pointerleave', () => {
+          card.style.transform = '';
+        });
+      });
+    }
 
     document.getElementById('contact-form').addEventListener('submit', event => {
-      event.preventDefault();
-      const data = new FormData(event.currentTarget);
-      const subject = encodeURIComponent(data.get('subject'));
-      const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`);
-      window.location.href = `mailto:anchuselva22@gmail.com?subject=${subject}&body=${body}`;
+      const form = event.currentTarget;
+      const button = form.querySelector('button[type="submit"]');
+      const note = document.getElementById('form-note');
+      button.disabled = true;
+      button.innerHTML = 'Sending message <span>...</span>';
+      note.textContent = 'Sending now. Please wait for the confirmation page.';
     });
   </script>
 </body>
